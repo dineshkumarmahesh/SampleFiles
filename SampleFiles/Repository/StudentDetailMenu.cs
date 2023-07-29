@@ -77,7 +77,7 @@ namespace SampleFiles.Repository
                 connection.Close();
                 foreach (var a in c)
                 {
-                    Console.WriteLine($" Empid-{ a.empid} Entername-{ a.entername} FatherName-{ a.fathername} email-{a.Email},Gender{a.Gender}");
+                    Console.WriteLine($" Entername-{ a.entername} FatherName-{ a.fathername} email-{a.Email},Gender{a.Gender}");
                 }
                 //{a.Empid}','{a.Firstname}','{a.Lastname}','{a.Email}'
                 return c;
