@@ -1,5 +1,5 @@
 ﻿using System;
-using SampleFiles.Business;
+//using SampleFiles.Business;
 using SampleFiles.Model;
 namespace SampleFiles
 {
@@ -10,11 +10,11 @@ namespace SampleFiles
 
             try
             {
-                StudentBusiness obj = new StudentBusiness();
-                obj.CRUD_Operation();
+                /*StudentBusiness obj = new StudentBusiness();
+                obj.CRUD_Operation();*/
 
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 throw;
             }

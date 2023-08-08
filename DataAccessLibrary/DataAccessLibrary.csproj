@@ -1,7 +1,6 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
@@ -11,7 +10,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Business\" />
+    <ProjectReference Include="..\SampleFiles\SampleFiles.csproj" />
+    <ProjectReference Include="..\studentwebapi\studentwebapi.csproj" />
   </ItemGroup>
 
 </Project>

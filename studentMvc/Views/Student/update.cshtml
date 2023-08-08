@@ -1,0 +1,45 @@
+﻿@model SampleFiles.Model.StudentInformation
+
+@{
+    ViewData["Title"] = "update";
+}
+
+<h1>update</h1>
+
+<h4>StudentInformation</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="update">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="entername" class="control-label"></label>
+                <input asp-for="entername" class="form-control" />
+                <span asp-validation-for="entername" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fathername" class="control-label"></label>
+                <input asp-for="fathername" class="form-control" />
+                <span asp-validation-for="fathername" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="email" class="control-label"></label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="gender" class="control-label"></label>
+                <input asp-for="gender" class="form-control" />
+                <span asp-validation-for="gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="List">Back to List</a>
+</div>
+

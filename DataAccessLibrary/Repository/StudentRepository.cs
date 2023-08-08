@@ -4,24 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SampleFiles.Model;
-using Dapper;
-using System.Data.SqlClient;
 
-namespace SampleFiles.Repository
+using System.Data.SqlClient;
+using Dapper;
+using studentwebapi.Controllers;
+
+namespace DataAccessLibrary.Repository
 {
-    public class EmployeeRepository
+
+    public class StudentRepository
 
     {
         public readonly string conectionstring;
-        public EmployeeRepository()
+        public StudentRepository()
         {
             conectionstring = @"Data source=DESKTOP-18UQSSV;Initial catalog=SQL ;User Id=sa;Password=Anaiyaan@123";
         }
 
-        public StudentInformations modelInfo()
+        public StudentInformation modelInfo()
         {
 
-            StudentInformations S = new StudentInformations();
+            StudentInformation S = new StudentInformation();
 
             Console.WriteLine("Enter  entername");
             S.entername = (Console.ReadLine());
@@ -37,7 +40,7 @@ namespace SampleFiles.Repository
             S.gender = Console.ReadLine();
             return S;
         }
-        public void InsertSP(StudentInformations a)
+        public void InsertSP(StudentInformation a)
         {
             try
             {
@@ -65,16 +68,16 @@ namespace SampleFiles.Repository
 
 
 
-        public List<StudentInformations> SelectSP()
+        public List<StudentInformation> SelectSP()
 
         {
             try
             {
-                List<StudentInformations> constrain = new List<StudentInformations>();
+                List<StudentInformation> constrain = new List<StudentInformation>();
 
                 var connection = new SqlConnection(conectionstring);
                 connection.Open();
-                constrain = connection.Query<StudentInformations>("  exec studentinformationcurd; ", conectionstring).ToList();
+                constrain = connection.Query<StudentInformation>("  exec select_studentinformationcurd ", conectionstring).ToList();
                 connection.Close();
 
 
@@ -167,11 +170,3 @@ namespace SampleFiles.Repository
         }
     }
 }
-
-
-
-
-
-
-
-

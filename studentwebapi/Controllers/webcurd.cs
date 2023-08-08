@@ -1,59 +1,67 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿//using Microsoft.AspNetCore.Mvc;
+//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Threading.Tasks;
+//using studentwebapi.Controllers;
+//using SampleFiles.Model;
+//using DataAccessLibrary.Repository;
+//using System.Data.SqlClient;
+//using Dapper;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+//// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace studentwebapi.Controllers
-{
-    [Route("api/[controller]")]
-    [ApiController]
-    public class webcurd : ControllerBase
-    {
-        webcurd obj;
+//namespace studentwebapi.Controllers
+//{
+//    [Route("api/[controller]")]
+//    [ApiController]
+//    public class webcurd : ControllerBase
+//    {
 
-        // GET: RegistrationController
-        public webcurd()
-        {
+//        studentRepository obj;
 
-            obj = new webcurd();
-        }
-        // GET: api/<EmployeeController>
-        [HttpGet]
-        public IEnumerable<webcurd> Get()
-        {
-            return obj.GetAllRegistration();
-        }
+//        public webcurd()
+//        {
 
-        // GET api/<EmployeeController>/5
-        [HttpGet("{Empid}")]
-        public string Get(int Empid)
-        {
-            return "value";
-        }
+//            obj = new studentRepository();
+//        }
+//        // GET: api/<webcurd>
+//        [HttpGet]
+//        public IEnumerable<StudentInformations> Get()
+//        {
+//            return obj.SelectSP();
+//        }
 
-        // POST api/<Controller>
-        [HttpPost]
-        public void Post([FromBody] webcurd value)
-        {
-            obj.Insert(value);
+//        // GET api/<webcurd>/5
+//        [HttpGet("{entername}")]
+//        public List<StudentInformations> Get(string entername)
+//        {
+//            return obj.SelectInfo(entername);
+//        }
 
-        }
+//        // POST api/<Controller>
+//        [HttpPost]
+//        public void Post([FromBody] StudentInformations value)
+//        {
+//            obj.Insert(value);
 
-        // PUT api/<EmployeeController>/5
-        [HttpPut("{Empid}")]
-        public void Put(int Empid, [FromBody] webcurd value)
-        {
-            obj.Insert(value);
-        }
+//        }
 
-        // DELETE api/<EmployeeController>/5
-        [HttpDelete("{Empid}")]
-        public void Delete(int Empid)
-        {
-            obj.Delete(Empid);
-        }
-    }
-}
+//        // PUT api/<webcurd>/5
+//        [HttpPut("{entername}")]
+//        public void Put(string entername, [FromBody] StudentInformations value)
+//        {
+//            value.entername = entername;
+//            obj.Update(value);
+//        }
+
+//        // DELETE api/<webcurd>/5
+//        [HttpDelete("{entername}")]
+//        public void Delete(string entername)
+//        {
+//            obj.Delete(entername);
+//        }
+//    }
+
+ 
+//}
